@@ -1,0 +1,303 @@
+@import url(font-awesome.min.css);
+@import url("https://fonts.googleapis.com/css?family=Nunito+Sans:300,400,600");
+
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+		-moz-animation: none !important;
+		-webkit-animation: none !important;
+		-ms-animation: none !important;
+		animation: none !important;
+		-moz-transition: none !important;
+		-webkit-transition: none !important;
+		-ms-transition: none !important;
+		transition: none !important;
+	}
+	
+	
+/* Button */
+
+.actions .button {
+		-moz-appearance: none;
+		-webkit-appearance: none;
+		-ms-appearance: none;
+		appearance: none;
+		-moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		-ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+		background: #19B5FE;
+		color: #FFF;
+		border-radius: 4px;
+		border: 0;
+		cursor: pointer;
+		display: inline-block;
+		font-weight: 700;
+		height: 2.85em;
+		line-height: 2.95em;
+		padding: 0 1.5em;
+		text-align: center;
+		text-decoration: none;
+		white-space: nowrap;
+	}
+
+	.actions .button.active {
+		color: #FFF;
+		background: #22313F;
+	}
+
+	.actions .button.active:hover {
+		color: #FFF;
+		background: #22313F;
+	}
+
+
+	.actions .button:hover {
+		color: #FFF;
+		background: #019be3;
+	}
+
+	.actions .button.alt {
+			background: none;
+			box-shadow: 0 0 0 2px rgba(144, 144, 144, 0.25);
+		}
+
+	.actions .button.alt:hover {
+		background: rgba(144, 144, 144, 0.075);
+		box-shadow: 0 0 0 2px rgba(144, 144, 144, 0.25);
+	}
+
+	.actions .button.big {
+		font-size: 1.35em;
+		padding: 0 2em;
+	}
+
+	.actions .button:disabled {
+		-moz-pointer-events: none;
+		-webkit-pointer-events: none;
+		-ms-pointer-events: none;
+		pointer-events: none;
+		opacity: 0.25;
+	}
+
+	@media screen and (max-width: 480px) {
+		.actions .button {padding: 0;}
+	}
+
+
+/* Icon */
+
+#nav .icon {
+		text-decoration: none;
+		border-bottom: none;
+		position: relative;
+	}
+
+#nav .icon:before {
+		-moz-osx-font-smoothing: grayscale;
+		-webkit-font-smoothing: antialiased;
+		font-family: FontAwesome;
+		font-style: normal;
+		font-weight: normal;
+		text-transform: none !important;
+	}
+
+#nav .icon > .label {
+		display: none;
+	}
+
+
+/*  Mk cert page wrap
+********************/
+.page-wrap {
+		display: -ms-flexbox;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-flex-wrap: nowrap;
+		-webkit-flex-wrap: nowrap;
+		-ms-flex-wrap: nowrap;
+		flex-wrap: nowrap;
+		-moz-justify-content: -moz-flex-start;
+		-webkit-justify-content: -webkit-flex-start;
+		-ms-justify-content: -ms-flex-start;
+		justify-content: flex-start;
+	}
+
+
+/* Mk cert Navigation
+********************/
+#nav {
+		background: #0d1217;
+		z-index: 10002;
+		position: relative;
+		width: 4em;
+	}
+
+	#nav ul {
+		list-style: none;
+		margin: 0;
+		padding: 0;
+		position: fixed;
+		top: 1em;
+		left: 0;
+	}
+
+	#nav ul li {
+		padding: 0;
+		width: 3.75em;
+		text-align: Center;
+		margin-bottom: 1em;
+	}
+
+	#nav ul li a {
+		color: rgba(255, 255, 255, 0.5);
+		text-decoration: none;
+		font-size: 1.5em;
+	}
+
+	#nav ul li a:hover {
+		color: white;
+	}
+
+	#nav ul li a.active {
+		color: #19B5FE;
+	}
+
+	@media screen and (max-width: 736px) {
+		#nav ul li {width: 3.4em;}
+	}
+
+/*  Mk cert Banner
+*****************/
+body.is-loading #banner > .inner {
+		opacity: 0;
+		-moz-transform: translateY(1em);
+		-webkit-transform: translateY(1em);
+		-ms-transform: translateY(1em);
+		transform: translateY(1em);
+	}
+
+#banner {
+		display: -ms-flexbox;
+		-ms-flex-pack: center;
+		-ms-flex-align: center;
+		padding: 8em 0 6em 0;
+		-moz-align-items: center;
+		-webkit-align-items: center;
+		-ms-align-items: center;
+		align-items: center;
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		-moz-justify-content: center;
+		-webkit-justify-content: center;
+		-ms-justify-content: center;
+		justify-content: center;
+		min-height: 85vh;
+		height: 85vh;
+		position: relative;
+		background: #000;
+		background-image: url( ../img/banner.jpg);
+		background-size: cover;
+		background-attachment: fixed;
+		background-repeat: no-repeat;
+		background-position: center;
+		text-align: center;
+		color: #FFF;
+	}
+	
+	#banner:before {
+			-moz-transition: opacity 3s ease;
+			-webkit-transition: opacity 3s ease;
+			-ms-transition: opacity 3s ease;
+			transition: opacity 3s ease;
+			-moz-transition-delay: 0.25s;
+			-webkit-transition-delay: 0.25s;
+			-ms-transition-delay: 0.25s;
+			transition-delay: 0.25s;
+			content: '';
+			display: block;
+			background-color: #000;
+			height: 100%;
+			left: 0;
+			opacity: 0.65;
+			position: absolute;
+			top: 0;
+			width: 100%;
+			z-index: 1;
+		}
+		
+		#banner .inner {
+			-moz-transform: none;
+			-webkit-transform: none;
+			-ms-transform: none;
+			transform: none;
+			-moz-transition: opacity 1s ease, transform 1s ease;
+			-webkit-transition: opacity 1s ease, transform 1s ease;
+			-ms-transition: opacity 1s ease, transform 1s ease;
+			transition: opacity 1s ease, transform 1s ease;
+			position: relative;
+			opacity: 1;
+			z-index: 3;
+			padding: 0 2em;
+		}
+		
+	#banner h1 {
+			font-size: 3em;
+			line-height: 1em;
+			margin: 0 0 0.5em 0;
+			padding: 0;
+			color: #FFF;
+		}
+
+		#banner p {
+			font-size: 1.5em;
+			margin-bottom: 1.75em;
+		}
+
+		#banner a {
+			color: #FFF;
+			text-decoration: none;
+		}
+
+		@media screen and (max-width: 1280px) {
+
+			#banner h1 {
+				font-size: 3.5em;
+			}
+
+		}
+
+		@media screen and (max-width: 736px) {
+
+			#banner {
+				background-attachment: scroll;
+			}
+
+				#banner h1 {
+					font-size: 2.25em;
+				}
+
+				#banner p {
+					font-size: 1.25em;
+				}
+
+		}
+        
+        .inner .mosseinblue{
+                color: #19B5FE;
+                font-size: inherit;
+        }
+        .inner .techred{
+                color:  #b30000;
+                font-size: inherit;
+        }
+		
+/* Mk cert Main
+***************/
+#main {
+		background: #f1f1f1;
+		width: 100%;
+	}
+        
